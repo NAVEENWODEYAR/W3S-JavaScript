@@ -1,0 +1,89 @@
+
+<!-- document.getElementsByTagName() method -->
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title> DOM </title>
+
+            <style>
+               
+                .vi
+                {
+                    position: fixed;
+                    height: 150%;
+                    right: 0;
+                    bottom: 0;
+                }
+                .d
+                {
+                    text-align: center;
+                    position: fixed;
+                    /* bottom: 0; */
+                    /* background: rgba(0,0, 0, 0.5); */
+                    color: #f1f1f1;
+                    width: 100%;
+                    padding: 2px;
+                }
+               #i1
+               {
+                height: 150px;
+                width: 150px;
+               }
+               #btn
+               {
+                background-color: aqua;
+                border-radius: 5px;
+                border: none;
+               }
+               #btn:hover
+               {
+                background-color: slategray;
+               }
+            </style>
+    </head>
+        <body>
+            <video autoplay muted loop class="vi">
+                <source src="pe.mp4" type="video/mp4">
+              </video>
+        
+                <div class="d">
+                    <h2> Accessing the field value by the document object. </h2>
+                    <form name="fm1">
+                        <label> Name* </label>
+                        <input type="text" name="inputtag" id="b1"><br>
+                        <span id="s1" style="color: crimson;"></span>
+                        <br><br>
+                        <label> Password* </label>
+                        <input type="password" id="b2"><br>
+                        <span id="s2" style="color: crimson;"></span><br>
+                        <button onclick="print_Name()" id="btn"> Login </button>
+                    </form>
+                    <div><br><br>
+                        <iframe id="i1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124426.97983377184!2d78.12001349721561!3d12.949882326662621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3badeae0853f49bb%3A0x5c9af502608e4089!2sKolar%20Gold%20Fields%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1683198689522!5m2!1sen!2sin" width="600px" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            
+                        <script>
+                            
+                            function print_Name()
+                            {
+                                let val = document.getElementById('b1').value;
+                                let val1 = document.getElementById('b2').value;
+                                    if(val == "" || val.length <= 4)
+                                    {
+                                        // alert("Please enter the username!");
+                                        document.getElementById('s1').innerText="Enter proper user name!";
+                                    }
+                                    if(val1 == '')
+                                    {
+                                        document.getElementById('s2').innerText="Please enter the password!";
+                                    }
+                                    else
+                                    {
+                                        let n = document.fm1.inputtag.value;
+                                        alert("Welcome " +n.toUpperCase());
+                                    }
+                            }
+                        </script>
+        </body>
+    </html>

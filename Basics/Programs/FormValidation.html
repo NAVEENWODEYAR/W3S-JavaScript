@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> Form Validation </title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        </head>
+            
+            <body>  <center>
+                    <h2> <nav class="navbar navbar dark bg-primary"> Form Validation </nav></h2>
+                        <form onsubmit="return validate_Form()">
+                            <div>
+                                <label> User Name: </label>
+                                <input type="text"id="i1"><br>
+                                <span id="s1" style="color: red;"></span>
+                            </div>
+                            <div>
+                                <label> Password: </label>
+                                <input type="password"id="i2"><br>
+                                <span id="s2" style="color:red"></span>
+                            </div>
+
+                                <button id="b1"> Login </button>
+                            
+
+                        </form>
+                    </center>
+
+
+                            <script>
+                                function validate_Form()
+                                {
+                                      let name = document.getElementById('i1').value;
+                                      let p = document.getElementById('i2').value;
+                            
+                                        if(name == "" || name.length<= 3)
+                                        {
+                                            document.getElementById('s1').innerHTML="Please provide proper user name."
+                                        }
+
+                                            if(p == "")
+                                            {
+                                                document.getElementById('s2').innerHTML = "Please type password."
+                                            }
+
+                                    return false;
+                                }
+                            </script>
+            </body>
+    </html>

@@ -1,0 +1,35 @@
+<!-- Javascript to change the attribute values. -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> JavaScript </title>
+
+            <style>
+                body
+                 {
+                    background-image: url(p5.jpg);
+                    background-repeat: no-repeat;
+                    background-position-x: fixed;
+                    background-size: 100% 100%;
+                }
+            </style>
+        </head>
+            <body bgcolor="aliceblue">
+                <center>
+                <h2> JavaScript Events. </h2>
+                <button onmouseout="document.getElementById('i').src = 'p1.jpg'"> HF </button>
+                <img id="i" src="p1.jpg" height="300" width="400">
+                <button onmouseover="document.getElementById('i').src = 'p2.jpg'"> Jersy </button>
+
+
+                <h3> Changes the html styles. </h3>
+                    <pre id="p1" > Malayalam is spoken mainly in India,@The God's Own Country@
+                                       where it is the official language of the state of Kerala and the union territory of Lakshadweep.</pre>
+                    <button onblur="document.getElementById('p1').style.fontSize='30px'"> Increase Size </button>
+
+                <h3 id="h"> Can hide or show html elements.</h3><br>
+                        <button onclick="document.getElementById('h').style.display='none'"> Hide </button>
+                        <button onclick="document.getElementById('h').style.display='block'"> Show </button>
+                </center>
+            </body>
+    </html>

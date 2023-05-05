@@ -1,0 +1,27 @@
+
+<!-- Javascript can change the html content. 
+    Javascript can change the html styles(css).
+    Javascript can hide the html elements.-->
+<html>
+        <head>
+            <title> document.getElementById </title>
+        </head>
+
+            <body>
+            <h2 id="h"> Hello Good Day.</h2>
+            <h3 id="g"> </h3>
+            <p id="pp" style="display: none"> JavaScript, often abbreviated as JS, 
+                is a programming language that is one of the core technologies of the World Wide Web,
+                 alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side 
+                 for webpage behavior, often incorporating third-party libraries.</p>
+                
+                    <button type="button" onclick='document.getElementById("h").innerHTML="Good Afternoon." '> ClickMe </button>
+                    <button type="button" onclick='document.getElementById("h").style.fontSize="45px" '> CSS </button>
+                    <button type="button" onclick='document.getElementById("h").style.display="none" '> Hide </button>
+                    <button type="button" onclick='document.getElementById("pp").style.display="block" '> JS </button>
+            </body>
+                <script>
+                    document.getElementById('g').innerHTML="Iam JAVASCRIPT!.";
+                </script>
+
+    </html>

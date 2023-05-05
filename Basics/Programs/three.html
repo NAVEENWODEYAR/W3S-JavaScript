@@ -1,0 +1,25 @@
+
+<!-- Javascript inside the body tag.-->
+   
+    <html>
+        <head>
+            <title> JS inside body.</title>
+        </head>
+            <body>
+                <h3 id="ab"> Javascript inside the body tag.</h3>
+                <p id="para"> Paragraph.</p>
+                <button type="button" onclick="tell()"> Click </button>
+                <button type="button" onclick="change()"> Button </button>
+
+                    <script>
+                        function tell()
+                        {
+                        document.getElementById('para').innerHTML="A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.";
+                        }
+                        function change()
+                        {
+                            doument.getElementById("ab").style.fontsize="50px";
+                        }
+                        </script>
+            </body>
+    </html>

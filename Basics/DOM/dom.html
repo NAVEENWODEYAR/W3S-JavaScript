@@ -1,0 +1,35 @@
+
+<!-- Javascript - document.getElementsByName() method -->
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title> DOM </title>
+
+            <style>
+                body
+                {
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                }
+            </style>
+    </head>
+        <body>
+            <video autoplay muted loop id="myVideo">
+                <source src="pe.mp4" type="video/mp4">
+              </video>
+            <h2> Accessing the field value by the document object. </h2>
+                <form name="fm1">
+                    <label> Name: </label>
+                    <input type="text" name="nm">
+                    <button onclick="print_Name()"> Name </button>
+                </form>
+
+                        <script>
+                            function print_Name()
+                            {
+                                let n = document.fm1.nm.value;
+                                alert("Welcome " +n);
+                            }
+                        </script>
+        </body>
+    </html>

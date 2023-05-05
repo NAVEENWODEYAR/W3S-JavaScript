@@ -1,0 +1,74 @@
+<!-- Date in JavaScript.  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+                 <title> Date & Time in JavaScript </title>
+                    <style>
+                        body
+                        {
+                            background-image: url(p7.jpg);
+                            background-size: 100% 100%;
+                            background-position: center;
+                            background-attachment: fixed;
+                        }
+                        #b5
+                        {
+                            background-color: blue;
+                            box-sizing: initial;
+                            text-anchor: middle;
+                            font-size: 2rem;
+                            border-style: hidden;
+                            background: steelblue;
+                            /* background-clip: padding-box; */
+                            /* border-bottom-color: none; */
+                            border-radius: 0%;
+                            color: aliceblue;
+                            font-weight: bold;
+                            float: inline-start;
+                            
+                        }
+                    </style>
+        </head>
+            <body>
+                <center><br><br>
+                    <div><br>
+                        <div class="container-fluid">
+                            <!-- <button id="bb"> TIME </button>
+                            <button id="b1"> TIME </button>
+                            <button id="b2"> TIME </button> -->
+                        </div>
+
+                        <span>
+                           <button id="b5"> TIME </button>
+                           <button id="b6"> TIME </button>
+                           <button id="b7"> TIME </button>
+                           <!-- <button id="b5"> TIME </button> -->
+                        </span>
+                    </div>
+                </center>
+
+                        <!-- <script>
+                            let d = new Date();
+                            let h = d.getHours();
+                            let m = d.getMinutes();
+                            let s = d.getSeconds();
+                            let tt = d.toLocaleTimeString();
+
+                            document.getElementById('bb').innerHTML= h;
+                            document.getElementById('b1').innerHTML= m;
+                            document.getElementById('b2').innerHTML= s;
+                            // document.getElementById('b2').innerHTML= tt;             // displays the complete time in 12Hr format.
+                        </script> -->
+
+                       <script>
+                                setInterval(()=>
+                                {
+                                    let d = new Date();
+                                    // document.getElementById('b5').innerHTML= d.toLocaleTimeString();
+                                    // document.getElementById('b6').innerHTML= d.toString();
+                                    document.getElementById('b7').innerHTML= d.toTimeString();
+                                },1000)
+                       </script>
+            </body>
+    </html>

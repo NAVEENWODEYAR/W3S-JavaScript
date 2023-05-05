@@ -1,0 +1,54 @@
+<!-- JavaScript Events.  -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title> JS Events </title>
+                <style>
+                    body 
+                    {
+                        background-image: url("g.jpg");
+                        background-size: 100% 100%;
+                        background-attachment: fixed;
+                        background-position: center;
+                        background-size: auto;
+                    }
+                </style>
+        </head>
+            <body>
+                    <h1> JavaScript Events. </h1>
+                        <form name="Form" onsubmit=" return text_Change()">
+                            <div>
+                                <label> Name: </label>
+                                <input type="text" id="i1"><br><br>
+                    
+                                <label> Password: </label>
+                                <input type="text" id="i2"><br>
+                      
+                                <button type="submit">Login</button>
+                                <button onclick="this.innerHTML = Date()"> Date </button>
+                            </div>
+                        </form>
+
+
+                                <script>
+                                    function text_Change()
+                                    {
+                                        let ref = document.getElementById('i1').value;
+                                            document.getElementById('i1').value = ref.toUpperCase();
+
+                                        let ref1 = document.getElementById('i2').value;
+                                            if (ref1 == ""  | ref1.length <= 4)
+                                            {
+                                                document.getElementById('i2').innerText="Idiot";
+                                                alert("Password length "+ ref1.length + " is not valid.");
+                                                // alert("Please enter your password.");
+                                            }
+                                        return false;
+                                    }
+                                </script>
+            </body>
+    </html>

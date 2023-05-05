@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> Java Script Events </title>
+		</head>
+
+		<body>
+				<h3> Events are "things" that happen to HTML elements.</h3>
+
+				<button id="b" onclick="document.getElementById('b').innerHTML=Date()"> Button1 </button>	
+
+				<p> This button displays date onclicking it.</p>
+
+				<button id="b2" onmouseover="displayDate()"> Button2 </button> <br><br>
+
+				<button ondblclick="this.innerHTML=Date()"> Button3 </button> <br><br>
+
+				<input type="text" id="i1" onblur="upCase()" placeholder="TextBox"/>
+
+
+			<script>
+				function displayDate()
+				{
+					
+					document.getElementById('b2').innerHTML=Date();
+					alert("Displays current date.");
+				}
+
+				function upCase()
+				{
+					document.getElementById('i1').innerHTML="Uppercase";
+				}
+			</script>
+
+		</body>
+	</html>

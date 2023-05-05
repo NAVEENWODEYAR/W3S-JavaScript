@@ -1,0 +1,61 @@
+<!-- Javascript to change the attribute values.
+    Writing into an HTML element, using innerHTML.
+    Writing into the HTML output using document.write().
+    Writing into an alert box, using window.alert().
+    Writing into the browser console, using console.log(). -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> JavaScript </title>
+
+            <style>
+                body
+                 {
+                    background-image: url(p5.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100% 100%;
+                    background-attachment: fixed;
+                   
+                }
+            </style>
+        </head>
+            <body bgcolor="aliceblue">
+                <center>
+                    <div>
+                        <h1 id="cl" style="color: aquamarine;">document.getElementById('Id').innerText="".</h1>
+                        <button onclick="up_Case()"> DOM </button> <br>
+                    </div>
+
+                    <div>
+                        <h1 id="cl1"> document.write. </h1>
+                        <p>Never call document.write after the document has finished loading.
+                            It will overwrite the whole document.</p>
+                        <button onblur="doc_Wrt()"> d.write() </button>
+                    </div>
+
+                    <div>
+                        <button onclick="window.print()"> Print </button>
+                        <!-- The only exception is that you can call the window.print() method in the browser to print the content of the current window. -->
+                    </div>
+
+                  
+
+                </center>
+
+
+                        <script>
+                            function up_Case()
+                            {
+                              document.getElementById('cl').innerText = " Using the id."
+                              alert("Document Object Model.")
+                            }
+
+                            function doc_Wrt()
+                            {
+                                document.write("document.write()")
+                            }
+                        </script>
+            </body>
+    </html>

@@ -1,0 +1,72 @@
+<!-- document.getElementsByName() method -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DOM </title>
+    <style>
+
+        .division {
+            text-align: center;
+            position: fixed;
+            color: azure;
+            width: 100%;
+            top: 0;
+            padding: 0px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+           height: 150%;
+        }
+        .label{
+            /* margin-top:300px; */
+            margin-top:200px;
+        }
+        .but{
+            background-color: rgb(30, 103, 30);
+            border-radius: 6px;
+            border: none;
+
+        }
+        .but:hover{
+            background-color: aqua;
+        }
+    
+
+    
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./pe1.mp4">
+    </video>
+    </div>
+    <div class="division">
+        <form name="fm">
+            <div class="label">
+                <label> User Name* </label>
+                <input type="text" name="username">
+                <br><br>
+                <label> Password* </label>
+                <input type="password" id="password">
+                <br><br>
+                <button class="but" onclick="copy()"> Login </button>
+            </div>
+
+            <script>
+                function copy() {
+                    let name = document.getElementsByName('username').value;
+                    let pwd = document.getElementById('password');
+                    document.getElementsById('password').innerText = "name";
+                    alert("document.getElementsByName");
+                }
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- Escape character in JavaScript. -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> JavaScript </title>
+                <style>
+                    body
+                    {
+                        background-image: url("g.jpg");
+                        background-position: center;
+                        background-attachment: fixed;
+                        background-size: auto;
+                        background-repeat: no-repeat;
+                        background-clip: padding-box;
+                        background-position-x: center;
+                        background-origin: unset;
+                    }
+                </style>
+        </head>
+            <body>
+
+                <h5 id="s"> JavaScript is the language of web. </h5>
+
+                <h2 id="h"> JavaScript Escape character </h2>
+                <pre id="p1"> The culture of Kerala evolved through the Sanskritization of Dravidian ethos, 
+                    revivalism of religious movements and reform movements against caste discrimination.
+                     Kerala showcases a culture unique to itself developed through accommodation, 
+                     acculturation and assimilation of various faculties of civilized lifestyle.</pre>
+            </body>
+
+                <script>
+                    document.getElementById('p1').style.color= "blue"; 
+                    document.getElementById('h').innerText = "JavaScript \"Escape sequence\"."
+                    document.getElementById('s').innerText = "Escape \n sequence."          // new line
+                    document.getElementById('s').innerText = "Escape \f sequence."          // form feed
+                    document.getElementById('s').innerText = "Escape \v sequence."          // new line
+                </script>
+    </html>

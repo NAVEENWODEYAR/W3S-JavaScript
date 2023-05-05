@@ -1,0 +1,42 @@
+<!-- Javascript - innerText -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> Javascript innerText </title>
+                <style>
+                    #mv
+                    {
+                        position: fixed;
+                        top: 0;
+                        bottom: 0;
+                        height: 150%;
+                    }
+                    .divi
+                    {
+                        text-align: center;
+
+                        position: fixed;
+                        padding: 2px;
+                        color: rgb(177, 20, 28);
+                        width: 100;
+                    }
+
+                </style>
+        </head>
+            <body>
+                <video autoplay muted id="mv">
+                    <source src="pe.mp4" type="video/mp4">
+                </video>
+                <div class="divi">
+                    <label> Javascript InnerHTML </label>
+                    <h2 id="i2" > Javascript innerText and InnerHTML </h2>
+                    <h2 id="i1" > Javascript innerText and InnerHTML </h2>
+                </div>
+                    <script>
+                            document.getElementById('i2').innerHTML="Inner HTML.";
+                     
+                            document.getElementById('i1').innerText="Inner Text.";
+                    </script>        
+            </body>
+    </html>

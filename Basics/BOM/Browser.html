@@ -1,0 +1,50 @@
+<!-- Browser Object Model is used to interact with the browser. -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> BOM </title>
+            <Style>
+                body
+                    {
+                        background-image: url(p3.jpg);
+                        background-attachment: fixed;
+                        background-position: center;
+                        background-size: 100% 100%;
+                        background-clip: content-box;
+                    }
+            
+            </Style>
+        </head>
+            <body>
+              <center>
+                <button id="b1" onclick="fn()"> BT</button>
+                <button id="b2" onclick="set_TimeOut()"> BT</button>
+              </center>
+
+                    <script>
+                       function fn()
+                        {
+                            document.getElementById('b1').innerHTML="Browser Object Model.";
+                            let a = prompt("Browser Object.");
+                            alert( a);
+                            confirm("Y");
+                            open("https://www.javatpoint.com/window-object");
+                            close("https://www.javatpoint.com/window-object");          // closes the current window
+                        }   
+
+                        function set_TimeOut()
+                        {
+                            setTimeout(function add()
+                            {
+                                let a = 4;
+                                let b = 4;
+                                document.write(a+b);
+                                history();
+                                // close();
+                              
+                            },2000)
+                        }
+                    </script>
+            </body>
+    </html>
