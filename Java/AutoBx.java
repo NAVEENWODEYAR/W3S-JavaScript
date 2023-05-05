@@ -11,6 +11,9 @@ class AutoBx
                 System.out.println(a);
                 System.out.println(b);
                 System.out.println(c);
+                // System.out.println(a.equals(b));
+                System.out.println(c.equals(b));
+                System.out.println(c.equals(a));
                 System.out.println(c.intValue());   // intValue()- get the value associated with the corresponding wrapper object.
 
         System.out.println("UnBoxing.");
