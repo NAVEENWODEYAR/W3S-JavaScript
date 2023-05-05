@@ -1,0 +1,76 @@
+<!-- // constructing the table body using the json data . -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> ForEach Loop </title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        </head>
+        <body onload="tbody()">
+            <nav class="navbar navbar-dark bg-dark">
+               
+                    <a href="https://en.wikipedia.org/wiki/Googleplex" class="navbar-brand"> Google </a>
+                    <a href="https://en.wikipedia.org/wiki/Main_Page" class="navbar-brand"> Microsoft </a>
+               
+            </nav>
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <table class="table table-hover">
+                            <!-- <caption> Employee Table </caption> -->
+                            <thead>
+                                <th> Id </th>
+                                <th> Name </th>
+                                <th> Email </th>
+                                <th> Gender </th>
+                            </thead>
+                            <tbody id="tb"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+           
+
+                    <script>
+                            let employee = [{ "id": 1, "name": "Darrel", "email": "dhalksworth0@people.com.cn", "gender": "Male" },
+{ "id": 2, "name": "Deana", "email": "dpea1@amazon.de", "gender": "Genderfluid" },
+{ "id": 3, "name": "Vinny", "email": "vstemp2@flickr.com", "gender": "Female" },
+{ "id": 4, "name": "Marie", "email": "mlamputt3@t-online.de", "gender": "Female" },
+{ "id": 5, "name": "Vickie", "email": "vorigin4@rakuten.co.jp", "gender": "Female" },
+{ "id": 6, "name": "Patric", "email": "pmerrall5@themeforest.net", "gender": "Male" },
+{ "id": 7, "name": "Hamnet", "email": "hgiddins6@sfgate.com", "gender": "Male" },
+{ "id": 8, "name": "Gates", "email": "ghatzar7@omniture.com", "gender": "Female" },
+{ "id": 9, "name": "Ewart", "email": "erizzini8@edublogs.org", "gender": "Male" },
+{ "id": 10, "name": "Jerrome", "email": "jvignaux9@nih.gov", "gender": "Male" },
+{ "id": 11, "name": "Deny", "email": "djiggena@home.pl", "gender": "Female" },
+{ "id": 12, "name": "Jasmine", "email": "jcastellettob@yahoo.com", "gender": "Genderfluid" },
+{ "id": 13, "name": "Pembroke", "email": "pbillhamc@army.mil", "gender": "Male" },
+{ "id": 14, "name": "Raynard", "email": "rsladed@wikia.com", "gender": "Male" },
+{ "id": 15, "name": "Gaylord", "email": "gengalle@tinyurl.com", "gender": "Male" },
+{ "id": 16, "name": "Ax", "email": "agodsilf@wisc.edu", "gender": "Male" },
+{ "id": 17, "name": "Antonius", "email": "agarrardg@cornell.edu", "gender": "Male" },
+{ "id": 18, "name": "Gwynne", "email": "gelbyh@github.io", "gender": "Female" },
+{ "id": 19, "name": "Brig", "email": "btaaffei@hubpages.com", "gender": "Male" },
+{ "id": 20, "name": "Abbie", "email": "akeymerj@pagesperso-orange.fr", "gender": "Male" }];
+                            // function to construct the table body
+                            let tbody = ()=>
+                            {
+                                let rows = "";
+                                    // for-each
+                                    employee.forEach((emp)=>
+                                    {
+                                        rows = rows +  `<tr>
+                                                            <td> ${emp.id} </td>
+                                                            <td> ${emp.name} </td>
+                                                            <td> ${emp.email.toLocaleUpperCase().slice(5,10)} </td>
+                                                            <td> ${emp.gender.substring(0,1)} </td>
+                                                        </tr>`
+                                    })
+                                    
+                                    document.getElementById('tb').innerHTML = rows;
+                                    // document.getElementById('tb').innerHTML = "Angry";
+                            }
+                    </script>
+        </body>
+    </html>
+
+
