@@ -1,0 +1,54 @@
+<!-- // passing an function as argument to the other function  -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> CallBack </title>
+            <style>
+                body{
+                    background-color: aqua;
+                }
+            </style>
+        </head>
+        <body onload="tbody()">
+                <h2> Employee Table using the JS Callback </h2>  
+                <table border="2">
+                    <caption> Employee Information </caption>
+                    <thead>
+                        <th> Id </th>
+                        <th> Name </th>
+                        <th> Location </th>
+                        <th> Sal </th>
+                    </thead>
+                    <tbody id="tb">
+                        
+                    </tbody>
+                </table>
+                    <script>
+                    let employee = [{Id:1,Name:"Roya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631},
+                                     {Id:2,Name:"Rya",Location:"Rosevalley",Sal:45631}]
+                    
+                        function tbody()
+                        {
+                            let row = "";
+                            for(e of employee)
+                            {
+                                row = row + `<tr>
+                                                <td> ${e.Id}</td>
+                                                <td> ${e.Name}</td>
+                                                <td> ${e.Location}</td>
+                                                <td> ${e.Sal}</td>
+                                            </tr>`
+                                            console.log(row);
+                                    // document.getElementById('tb').innerHTML = row;                                                 
+                            }
+                            document.getElementById('tb').innerHTML = row;                           
+                        }
+                    
+                    </script>
+        </body>
+    </html>

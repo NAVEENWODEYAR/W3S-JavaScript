@@ -1,0 +1,31 @@
+let student = [{Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},]
+
+                            let create_Student = (emp)=>{
+                                setTimeout(()=>{
+                                    student.push(emp);
+                                },4000)
+                            }
+
+                            let get_Student = ()=>{
+                                setTimeout(()=>{
+                                    let rows = "";
+                                    for ( st of student)
+                                    {
+                                        rows += `<tr>
+                                                <td> ${st.Id} </td>
+                                                <td> ${st.Name} </td>
+                                                <td> ${st.Email} </td>
+                                                <td> ${st.Sal} </td>
+                                                <td> ${st.Location} </td>
+                                            </tr>`
+                                    }
+                                    document.getElementById('tbd').innerHTML = rows;
+                                    console.log("esdgsdf");
+                                },2000)
+
+                                create_Student({id:200,Name:"Serena",Email:"Serena@gmail.com",Sal:794646.00,Location:"Singapore"})
+                                get_Student();
+                            }

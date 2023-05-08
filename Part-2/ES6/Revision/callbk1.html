@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title> Callaback Using JavaScript </title>
+    </head>
+   
+    <body>
+        <h2> CallBack in JavaScript </h2>
+        <table border="2">
+                <thead>
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> E-Mail </th>
+                    <th> Sal </th>
+                    <th> Location </th>
+                </thead>
+                <tbody id="tbd">
+                </tbody>
+        </table>
+
+                <script>
+                    let student = [{Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},
+                                  {Id:100,Name:"Sara",Email:"sara@gmail.com",Sal:79846.00,Location:"Los Angeles"},]
+
+                            let create_Student = (emp,callback)=>{
+                                setTimeout(()=>{
+                                    student.push(emp);
+                                    callback();
+                                },4000)
+                            }
+
+                            let get_Student = ()=>{
+                                setTimeout(()=>{
+                                    let rows = "";
+                                    for ( st of student)
+                                    {
+                                        rows += `<tr>
+                                                <td> ${st.Id} </td>
+                                                <td> ${st.Name} </td>
+                                                <td> ${st.Email} </td>
+                                                <td> ${st.Sal} </td>
+                                                <td> ${st.Location} </td>
+                                            </tr>`
+                                    }
+                                    document.getElementById('tbd').innerHTML = rows;
+                                    console.log("esdgsdf");
+                                },2000)
+                            }
+                            create_Student({Id:200,Name:"Serena",Email:"Serena@gmail.com",Sal:794646.00,Location:"Singapore"},get_Student)
+                                // get_Student();
+                </script>
+    </body>
+    </html>

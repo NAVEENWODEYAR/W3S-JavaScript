@@ -1,9 +1,20 @@
-// Map() - iterates the array & executes the function array length times.
+// ES-6 Array methods- map(), foreach(),reduce(),filter().
 
-    let emp = ["Annie","Backy","Clara","Daiyana","Emma"];
-    let new_Emp = emp.map((e)=>{
-            // console.log(e);                  // Iterates the array
-            // return e.toUpperCase();             // pass the result to the calling array.
-            return e.length;                // pass the result to the calling array.
-    });
-    console.log(new_Emp);
+    // array with elements.
+    let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+        // for loop to iterate the array.
+        for (let i=1; i<= arr.length; i++)
+        {
+            console.log(i);
+        }
+
+            // for - in to iterate the array.
+            for (a in arr)
+            {
+                console.log(arr[a]);
+            }
+
+         arr.map(()=>
+         {
+            return arr;
+         })
