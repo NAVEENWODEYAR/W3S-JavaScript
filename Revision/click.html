@@ -1,0 +1,26 @@
+<!-- JavaScript onclick event -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> JavaScript onclick event </title>
+        </head>
+        <body>
+            <h2 id="hh"> JavaScript onclick event </h2>
+
+                <script>
+                    document.getElementById('hh').onclick = function (){ch_Size()};
+
+                    function ch_Size()
+                    {
+                        document.getElementById('hh').innerHTML = "Onclicking the element some action will be perfoemed.";
+                        document.getElementById('hh').style.fontSize = "10rem";
+                        document.getElementById('hh').style.color = "green";
+                        document.getElementById('hh').style.fontStyle = "bold";
+                    }
+                </script>
+        </body>
+    </html>

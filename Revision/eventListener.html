@@ -1,0 +1,58 @@
+<!-- addEventListener() used to attach an event handler to a particular element -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> JavaScript Events </title>
+                <style>
+                    body
+                    {
+                        background-color: grey;
+                    }
+                    #d
+                    {
+                        height: 200px;
+                        width: 500px;
+                        border: 2px solid blueviolet;
+                    }
+                </style>
+        </head>
+        <body>
+           <h2> JavaScript Event Handling </h2>
+            <button onclick="this.innerHTML = new Date()"> OnClick </button><br><br>
+            <button onmouseover="this.innerHTML= new Date()"> OnMouseOver </button><br><br>
+            <label id="l1"> OnMouseOut - when the cursor of the mouse leaves an element </label><br>
+            <button onmouseout="ch_Color()"> OnMouseOut </button><br><br>
+            <label id="l2"> OnMouseDown() - when the mouse button pressed over an element </label><br>
+            <button onmousedown="ch_Size()"> OnMouseDown </button><br><br>
+            <label id="l3"> OnMouseUp() - when the mouse button pressed over an element </label><br>
+            <button onmouseup="c_Size()"> OnMouseUp</button><br><br>
+            <label id="l4"> OnMouseMove() - when the mouse movement takes place </label><br>
+            <button onmousemove="ch_Style()"> OnMouseMove </button>
+
+            <div id="d" onmousemove="ch_Style()"> <h3> Division </h3> </div>
+
+            <button onclick="location.reload()"> Refresh </button>
+        </body>
+
+            <script>
+                let ch_Color = ()=>{
+                    document.getElementById('l1').style.color = "green";
+                }
+
+                let ch_Size = ()=>{
+                    document.getElementById('l2').style.color = "blue";
+                }
+
+                let c_Size = ()=>{
+                    document.getElementById('l3').style.fontSize = "2rem";
+
+                }
+
+                let ch_Style = ()=>{
+                    document.getElementById('d').style.size = "5rem";
+                }
+            </script>
+    </html>
