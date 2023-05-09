@@ -1,0 +1,51 @@
+<!-- Cookies in JavaScript - piece of information that persists between the server - clint. -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> Cookie in JavaScript </title>
+                <style>
+                    body
+                    {
+                        background-image: url(gg.jpg);
+                        background-size: 100%;
+                    }
+                </style>
+        </head>
+        <body onload="window.alert('Page Loaded Successfully');">
+            <h2> Cookie in JavaScript </h2>
+            <input type="button" value="i1" onclick="set_Cookie()"><br><br>
+            <input type="button" value="i2" onclick="get_Cookie()"><br>
+            
+                <script>
+                    function set_Cookie()
+                    {
+                        document.cookie= "userName:Marry;expires=10-05-2023"
+
+                         if(document.cookie != 0)
+                        {
+                            alert("cookie set successfully");
+                        }
+                        else
+                        {
+                            alert("Please set the cookie");
+                        }
+                    }
+
+                    function get_Cookie()
+                    {
+                        if(document.cookie =! 0)
+                        {
+                            let array = document.cookie.split("=");
+                            alert(document.cookie);
+                            alert(array[0],array[1]);
+                        }
+                        else
+                        {
+                            // document.cookie = "userName:Margaret";
+                            alert("Cookie is not available.");
+                        }
+                    }
+                </script>
+        </body>
+    </html>
