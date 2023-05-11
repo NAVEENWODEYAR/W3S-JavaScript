@@ -1,0 +1,42 @@
+<!-- Callback in JavaScript  -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Callback in JavaScript </title>
+        </head>
+        <body onload=tbody()>
+            <h2> Callback - passing the function as argument to the function </h2>
+                <div class="tbl">
+                    <table border="2px solid black">
+                        <caption> Student Table </caption>
+                        <thead>
+                            <th> Id </th>
+                            <th> Name </th>
+                            <th> Class </th>
+                            <th> Percentage </th>
+                        </thead>
+                        <tbody id="tbd"></tbody>
+                    </table>
+                </div>
+
+                    <script>
+                        let std = [{id:1,name:'Nacny',class:10,percentage:95}];
+                        let rows = "";
+                            let tbody = ()=>{
+                                for (s of std)
+                                {
+                                    rows = rows + `<tr>
+                                            <td> ${s.id} </td>
+                                            <td> ${s.name} </td>
+                                            <td> ${s.class} </td>
+                                            <td> ${s.percentage} </td>
+                                        </tr>`   
+                                }
+                                document.getElementById('tbd').innerHTML = rows;
+                            }
+                    </script>
+        </body>
+    </html>

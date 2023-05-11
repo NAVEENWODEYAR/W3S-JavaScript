@@ -1,0 +1,54 @@
+<!-- Callback in JavaScript.  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Callback </title>
+        </head>
+        <body>
+            <table border="2px">
+                <caption> Employee Table </caption>
+                <thead>
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> Email </th>
+                    <th> Location </th>
+                    <th> Salary </th>
+                </thead>
+                <tbody id="tbd"></tbody>
+            </table>
+                <script>
+                    let employee = [{id:4,Name:"Rose",Email:"rose@gmail.com",Location:"Rome",Salary:10000.00}];
+
+                        function create_Emp(emp,callback)
+                        {
+                            setTimeout(()=>{
+                                employee.push(emp);
+                                callback();
+                            },4000)
+                        }
+
+                        function get_Emp()
+                        {
+                            setTimeout(()=>{
+                                let row = "";
+                                for (const emp of employee) {
+                                    row += `<tr>
+                                            <td> ${emp.id}</td>
+                                            <td> ${emp.Name}</td>
+                                            <td> ${emp.Email}</td>
+                                            <td> ${emp.Location}</td>
+                                            <td> ${emp.Salary}</td>
+                                        </tr>`
+                                }
+                                document.getElementById('tbd').innerHTML = row;
+                            },2000)
+                        }
+
+                        create_Emp({id:8,Name:"Kate",Email:"kate@gmail.com",Location:"Kentucky",Salary:90000.00},get_Emp);
+                </script>
+        </body>
+    </html>

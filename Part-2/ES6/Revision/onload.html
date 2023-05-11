@@ -1,0 +1,23 @@
+<!-- Onload event using JavaScript  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Onload in JavaScript </title>
+        </head>
+        <body onload="text_Msg()">
+            <h2> Event Handling in JavaScript </h2>
+            <label> Name* </label>
+            <input type="text"><br><br>
+            <button type="submit" onclick="window.location.reload()"> Submit </button>
+                <script>
+                    function text_Msg()
+                    {
+                        alert("Onload executes on loading the page/form.");
+                    }
+                </script>
+        </body>
+    </html>

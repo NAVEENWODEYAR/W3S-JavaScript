@@ -1,0 +1,56 @@
+<!-- Callback in JavaScript.  -->
+
+<html>
+    <head>
+        <title> Callback in JavaScript </title>
+    </head>
+    <body >
+        <h2> Constructing the table body using the callback function in JavaScript </h2>
+            <table border="2px">
+                <caption> Student Table </caption>
+                <thead>
+                    <th> Reg No </th>
+                    <th> Name </th>
+                    <th> Grade </th>
+                    <th> Per </th>
+                    <th> Gender </th>
+                </thead>
+                <tbody id="tbd"> </tbody>
+            </table>
+                    <script>
+                        let student = [{Reg:1,Name:"Carolina",Grade:12,Per:95.5,Gender:"Female"},
+                                        {Reg:1,Name:"Carolina",Grade:12,Per:95.5,Gender:"Female"},
+                                        {Reg:1,Name:"Carolina",Grade:12,Per:95.5,Gender:"Female"},
+                                        {Reg:1,Name:"Carolina",Grade:12,Per:95.5,Gender:"Female"}];
+
+                            let create_Table = (st,callback)=>{
+                                setTimeout(()=>{
+                                    student.push(st);
+                                    callback()
+                                },4000)
+                            }
+
+                            
+                            let get_Table = ()=>{
+                                setTimeout(()=>{
+                                    let rows = "";
+                                    for (const st of student) {
+                                        rows += `<tr>
+                                                <td> ${st.Reg}</td>
+                                                <td> ${st.Name}</td>
+                                                <td> ${st.Grade}</td>
+                                                <td> ${st.Per}</td>
+                                                <td> ${st.Gender}</td>
+                                                </tr>`
+                                    }
+                                    document.getElementById('tbd').innerHTML = rows;
+                                },2000)
+                            }
+
+                            // invoking the callback function.
+                            create_Table({Reg:2,Name:"Dora",Grade:12,Per:9.5,Gender:"Female"},get_Table);
+                       
+                    </script>
+        </body>
+
+</html>
