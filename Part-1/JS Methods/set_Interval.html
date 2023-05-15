@@ -1,0 +1,26 @@
+<!-- setInterval() - to repeat a function specified times  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> setInterval </title>
+            
+        </head>
+        <body>
+            <a href="https://karnatakatourism.org/tour-item/malnad-region-tour-package/"> Malnad </a>
+            <img id="i1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhi8bfuFB4sy1cBkEkBWOgW-kIgahqbJKzw5xvPA56Gw&usqp=CAU&ec=48665701" alt="">
+                <script>
+                    function change_Source()
+                    {
+                        setInterval(()=>{
+                            document.getElementById('i1').setAttribute("src", "gg.jpg");
+                            // alert("Malnad");
+                        },1000)
+                    }
+                    change_Source();
+                </script>
+        </body>
+    </html>
