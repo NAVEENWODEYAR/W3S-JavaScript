@@ -1,0 +1,24 @@
+<!-- JavaScript provides "use strict"; expression to enable the strict mode. If there is any silent error or mistake in the code, it throws an error. -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Strict mode in JavaScript </title>
+        </head>
+        <body>
+            <h2> "use strict" to enable the strict mode </h2>
+                <script>
+                    "use strict";
+                    x = 5;
+                    console.log(x);             // error - x is not defined.
+                    add_No(5,5);                // error - duplicate parmeter name is not allowed.
+                        function add_No(a,a)
+                        {
+                            console.log(a+a);
+                        }
+
+                </script>
+        </body>
+    </html>

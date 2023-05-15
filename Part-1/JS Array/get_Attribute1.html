@@ -1,0 +1,26 @@
+<!-- The getAttribute() method is used to get the value of an attribute of the particular element.  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> getAttribute() </title>
+        </head>
+        <body>
+            <h2> getAttribute() </h2>
+            <img src="b.jpeg" id="i1" style="width: 100%; height: 100%; background-repeat: no-repeat;">
+            <a id="a1" href="https://www.google.com/search?rlz=1C1CHBF_enIN1047IN1047&sxsrf=APwXEdc4grm5L6ucQppn_cs_r6q6bj902A:1684140676807&q=Marthanda+Varma+Bridge+Aluva&stick=H4sIAAAAAAAAAONgFuLUz9U3MKvMTTdU4tVP1zc0TM4pMTQpKavQUsxOttLPyU9OLMnMz4MzrBJLSooSk0HM4kWsMr6JRSUZiXkpiQphiUW5iQpORZkp6akKjjmlZYkAl13RX14AAAA&sa=X&ved=2ahUKEwjIwqv2-Pb-AhXsXmwGHR3WBhQQ2coHegUIlwEQAQ"> Aluva </a>
+            <button id="w1" onclick="gt_Att()"> BTN 1</button>
+            <button id="w2" onclick="gt_Att()"> BTN 2 </button>
+              <script>
+                        let gt_Att = ()=>{
+                            let d1 = document.getElementById('i1').getAttribute("style");
+                            let d2 = document.getElementById('i1').getAttribute("src");
+                            document.getElementById('w1').innerHTML = d1;
+                            document.getElementById('w2').innerHTML = d2;
+                        }   
+                    </script>
+            </body>
+    </html>

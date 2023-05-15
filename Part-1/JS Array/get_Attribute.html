@@ -1,0 +1,25 @@
+<!-- The getAttribute() method is used to get the value of an attribute of the particular element.  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> getAttribute() </title>
+        </head>
+        <body>
+            <h2> getAttribute in JavaScript </h2>
+                <div id="d1" style="height: 100px; width: 100%; text-align: center; font-size: 3rem; color: yellow; padding-top: 15px; background-color: blue;"> Division </div>
+                <div id="d2" style="height: 100px; width: 100%; background-color: greenyellow; color: #6545"> Division1 </div>
+                <button id="b1" onclick="get_Att()">Style</button>
+                    <script>
+                        function get_Att()
+                        {
+                            var d1 = document.getElementById('d1').getAttribute("style");
+                            document.getElementById('b1').innerHTML = d1;
+                            alert(d1);
+                        }
+                    </script>
+            </body>
+    </html>
