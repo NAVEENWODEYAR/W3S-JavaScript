@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> redirect in JavaScript </title>
+        </head>
+        <body>
+            <h2> window.location </h2>
+            <button onclick="this.innerHTML = Date()"> click here </button>
+            <button onclick="this.location.reload"> click here </button>
+
+                <script>
+                    // let pg_Redirect = ()=>{
+                    //     window.location.reload();
+                    // }
+                    // setInterval(pg_Redirect,1000);
+
+                    setInterval(()=>{
+                        window.location.replace("https://www.w3schools.com/js/js_events.asp");
+                    },2000)
+                </script>
+        </body>
+    </html>

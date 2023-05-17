@@ -1,0 +1,61 @@
+<!-- callback - passing an function as parameter to the other function -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> callback </title>
+            <style>
+               #vid
+               {
+                   position: fixed;
+                   top: 0;
+                   bottom: 0;
+                   right: 0;
+                   left: 0;
+                   height: 130%;
+               }
+               #d1
+               {
+                text-align: center;
+                position: fixed;
+                padding: 2px;
+                margin-top: 0px;
+                width: 100%;
+                font-size: 3rem;
+               }
+            </style>
+        </head>
+
+        <body>
+            <video autoplay muted loop id="vid">
+                <source src="pe1.mp4" type="video/mp4">
+
+            </video>
+            <div id="d1">
+               <a href="https://www.javatpoint.com/javascript-callback" style="text-decoration: none; color: whitesmoke" target="_blank"><h2> Callback in JavaScript </h2></a> 
+
+                    <script>
+                        function get_details(callback)
+                        {
+                            alert("Calling function.");
+                            name = prompt("Enter your name:");
+                            age = prompt("Enter your age:");
+                            callback(name,age);
+                        }
+
+                        function show_Details(name,age)
+                        {
+                            alert("Callback function.");
+                            console.log("Your name: ",name);
+                            console.log("Your age: ",age);
+                        }
+
+                        get_details(show_Details);
+
+                    </script>
+            </div>
+        </body>
+    </html>

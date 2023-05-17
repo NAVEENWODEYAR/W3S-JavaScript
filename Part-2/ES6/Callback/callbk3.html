@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> callBack in JavaScript </title>
+        </head>
+        <body>
+            <center>
+                <h1> Callback Function in JavaScript </h1>
+                
+                Name <input type="text" id="i1"><br><br>
+                Age <input type="number" id="i2"><br>   
+                <span id="s" style="color: salmon;"></span><br>
+                <button onclick="get_Details(show_Details)"> Callback </button>
+
+                    <script>
+                        let get_Details = (callback)=>{
+                            name = prompt("Enter your name:");
+                            age = parseInt(prompt("Enter your birth year"));
+                                if (name == "" || age == '' )
+                                {
+                                    // alert("Details saved successfully");
+                                    document.getElementById('s').innerHTML = "Details not saved";
+                                }
+                                else
+                                {
+                                    // alert("Please provide the details!");
+                                    document.getElementById('s').innerHTML = "Details saved";
+
+                                }
+
+                                callback(name,age);
+                        }
+
+                        let show_Details = ()=>{
+                            document.getElementById('i1').value = name;
+                            age = 2023 - age;   
+                            document.getElementById('i2').value = age;
+                        }
+
+
+                    </script>
+            </center>
+        </body>
+    </html>

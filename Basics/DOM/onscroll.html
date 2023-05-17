@@ -1,0 +1,36 @@
+<!-- onscroll  -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> onscroll in Html </title>
+                <style>
+                    #pa
+                    {
+                        font-size: 2rem;
+                        height: 100px;
+                        width: 500px;
+                        border: 2px solid salmon;
+                        overflow: scroll;
+
+                    }
+                </style>
+        </head>
+        <body>
+            <h2> onscroll, when the user moves the cursor </h2>
+            <p id="pa" onscroll="onscrl()"> Onscroll executes when the user moves the mouse on a particullar element in the document.
+                Onscroll executes when the user moves the mouse on a particullar element in the document.
+                Onscroll executes when the user moves the mouse on a particullar element in the document.</p>
+        
+                <script>
+                    function onscrl ()
+                    {
+                        document.getElementById('pa').style.color = "green";
+                        document.getElementById('pa').style.background = "blue";
+                    }
+                </script>
+        </body>
+    </html>
