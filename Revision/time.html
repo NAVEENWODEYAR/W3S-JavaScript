@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Timer using JavaScrit </title>
+        </head>
+        <body>
+            <h2 id="hd"> setTimeOut function in JavaScrit</h2>
+            <p id="p1"> Displays the date after 2 seconds </p>
+                <script>
+                    setTimeout(()=>{
+                        let d = new Date();
+                          document.getElementById('p1').innerHTML = d.toString();
+                          document.getElementById('p1').style.color = "blue";
+
+                    },2000);
+
+                    let wish = ()=>{
+                        document.getElementById('hd').innerHTML = "Welcome to our website";
+                    }
+                    setTimeout(wish(),3000);
+                </script>
+        </body>
+    </html>

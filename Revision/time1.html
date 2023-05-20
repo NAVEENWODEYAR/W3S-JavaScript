@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Timer using JavaScrit </title>
+            <style>
+                body
+                {
+                    background-color: tomato;
+                    background-size: 0;
+                    font-size: 5rem;
+                }
+            </style>
+        </head>
+        <body>
+            <center>
+                <h3> Update the time every second </h3>
+                <h4> The time is </h4><span id="s1"></span><br>
+                <button onclick="stop_Time()"> Stop </button>
+            </center>
+           
+            <script>
+               var id = setInterval(()=>{
+                    let date = new Date();
+                    document.getElementById('s1').innerHTML = date.toLocaleTimeString();
+                },1000)
+
+                let stop_Time = ()=>{
+                    clearInterval(id);
+                }
+            </script>
+        </body>
+    </html>

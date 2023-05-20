@@ -1,0 +1,32 @@
+<!-- // removing the elements from the arry im JavaScrit using the loop -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> JavaScrit Array </title>
+        </head>
+        <body>
+            <h2>Remove elements from array in JavaScript</h2>
+
+                <script>
+                    let arr = [1,2,3,4,5,6,7,8];
+                    document.write("Initial array-[",arr,"]");
+                        arr.push(9);
+                        arr.unshift(0);
+                        arr[8] = "Eight";
+                    document.write("<br> After Appending the elements to the arry-[",arr,"]<br>");
+
+                    // removing the elements
+                        arr.pop();
+                        document.write("Removed the last element from the arry-[",arr,"]<br>");
+                        arr.shift();
+                        document.write("Removed the first element from the arry-[",arr,"]<br>");
+                        arr.splice(1,4)
+                        document.write("Removed four elements form the arry by specifying the starting index-[",arr,"]<br>");
+
+                </script>
+        </body>
+    </html>

@@ -1,0 +1,23 @@
+<!-- // removing the elements from the arry im JavaScrit using the loop -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> JavaScrit Array </title>
+        </head>
+        <body>
+            <h2>Remove elements from array in JavaScript</h2>
+
+                <script>
+                    let num = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","One"];
+                    document.write("Initial array-[",num,"]");
+                    document.write("<br>Initial array size- ",num.length,"<br>");
+
+                        num.splice(0,9);
+                        document.write(num)
+                </script>
+        </body>
+    </html>
