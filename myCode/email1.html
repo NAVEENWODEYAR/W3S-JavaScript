@@ -1,0 +1,39 @@
+<!-- E-mail validation using the JavaScript.  -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> E-Mail Validation </title>
+        </head>
+        <body>
+            <h2> E-Mail Validation using JavaScript </h2>
+                <form onsubmit=" return validate()">
+                    E-Mail Id* <input type="text" name="" id="i1"><br><br>
+                    Password*  <input type="text" name="" id="i2"><br><br>
+                    <span id="s" style="color: brown;"></span><br>
+                    <input type="submit" value="Submit">
+                    <button type="refresh" onclick="window.location.reload()"> F5 </button>
+                </form>
+
+                    <script>
+                        function validate()
+                        {
+                            let email = document.getElementById('i2').value;
+                                let at_Posn = email.indexOf("@");
+                                let dot_Posn = email.lastIndexOf("."); 
+                            let pwd = document.getElementById('i2').value;
+                               
+                                if (email == "")
+                                {
+                                    alert("Password can't be empty");
+                                    // document.getElementById('s').innerHTML = "Mandatory field!";
+
+                                }
+                                if( at_Posn < 1 || dot_Posn < at_Posn+2 || dot_Posn >= email.length)
+                                {
+                                    document.getElementById('s').innerText = "Please enter the valid e-mail id!"
+                                }
+                            return false;
+                        }
+                    </script>
+        </body>
+    </html>

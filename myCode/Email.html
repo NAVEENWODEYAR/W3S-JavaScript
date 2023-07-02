@@ -1,0 +1,68 @@
+<!-- Email validation using JavaScript
+Validation - 1) email should contain @ and . 
+             2) must be atleast one character before and after @ and . 
+             3) muse be atleast characters after .   -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> E-mail Validation </title>
+                <style>
+                    body
+                    {
+                        background-image: url(v.jpg);
+                        background-attachment: fixed;
+                        background-size: 100% 100%;
+                        /* background-repeat: no-repeat; */
+                        backface-visibility: visible;
+                    }
+                </style>
+        </head>
+        <body>
+            <form onsubmit=" return email_validate()">
+                <label> E-Mail Id* </label>
+                <input type="text" id="a1"><br>
+                <span id="sp1" style="color: brown;"></span><br>
+                <label> Password* </label>
+                <input type="password" id="a2"><br>
+                <span id="sp" style="color: crimson;"></span><br>
+                <input type="submit" value="Login">
+                <input type="reset" value="Clear">
+                <button onclick="window.location.reload()"> F5 </button>
+            </form>
+
+                    <script>
+                            function email_validate()
+                            {
+                                let email = document.getElementById('a1').value;
+                                let pwd = document.getElementById('a2').value;
+                                    
+                                let at = email.indexOf("@");
+                                let dot = email.lastIndexOf(".");
+                                    
+                                if (email == "")
+                                    {
+                                       // alert("E-mail can't be empty");
+                                        // console.log(at,dot);
+                                        document.getElementById('sp1').innerText ="E-mail can't be empty";
+                                    }
+
+                                    if(at <1 || dot < at+2 || dot+2 >= email.length)
+                                    {
+                                        document.getElementById('sp1').innerText = "Please enter the proper mail.";
+                                    }
+                                 
+                                    if(pwd == "" || pwd.length <= 6)
+                                    {
+                                        document.getElementById('sp').innerHTML = "Please enter the password";
+                                       // alert("Password should be atleast 6 characters.");
+                                    }
+                                return false;
+                               
+                            }
+                    </script>
+
+        </body>
+    </html>

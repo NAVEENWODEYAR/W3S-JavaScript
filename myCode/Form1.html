@@ -1,0 +1,60 @@
+<!-- Form Validation using JavaScript 
+Write a script to for setting the password in the html form. -->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title> Form Validation </title>
+            <script src="validate.js" type="text/JavaScript"></script>
+            <style>
+                .myvideo
+                {
+                    position: fixed;
+                    /* position: relative; */
+                    /* object-position: center; */
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 150%;
+                    /* width: 100%; */
+                }
+                .cont
+                {
+                position: fixed;
+                    text-align: center;
+                    color: rgb(255, 250, 251);
+                    width: 100px;
+                    padding: 20px;
+                    margin-left:10px;
+                }
+
+
+            </style>
+        </head>
+        <body>
+            <video autoplay muted loop class="myvideo">
+                <source src="pex.mp4" type="video/mp4">
+            </video>
+              
+                    <form onsubmit="return pwd_Matcher()">
+                        <div class="cont">
+                        <label><h1> <a href="#" style="text-decoration: none;"> Register here </a></h1></label><br>
+                       
+                        <label> User Name* </label>
+                        <input type="text" id="in1"><br>
+                        <span id="sp2" style="color: mediumvioletred;"></span><br>
+                       
+                        <label> Password* </label>
+                        <input type="password" name="" id="in2"><br><br>
+                       
+                        <label> Re-Password* </label>
+                        <input type="password" name="" id="in3"><br>
+                        <span id="sp1" style="color: mediumvioletred;"></span><br>
+                        
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                      </div>
+                    </form>
+                    
+        </body>
+    </html>
