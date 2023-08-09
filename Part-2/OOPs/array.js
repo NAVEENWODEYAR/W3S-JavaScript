@@ -14,3 +14,4 @@ let ar1 = [];
 
 let ar2 = new Array();
 console.log(ar2);
+
